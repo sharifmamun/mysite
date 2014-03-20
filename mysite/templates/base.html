@@ -3,13 +3,18 @@
 	<head>
 		<title> {% block title %} {% endblock%} </title>
 		<meta http-equiv="refresh" content="45" >
+		{% load staticfiles %}
+
+		<link rel="stylesheet" type="text/css" href="{% static "file.css" %}">
+		
 	</head>
 	 	<body>
 	 		<h1>My helpful timestamp site!</h1>
+
 	 		{% block content %} {% endblock %}
 	 		
 	 		<hr>
-	 		<p>Thanks for visiting my site.</p>
+	 		<div>Thanks for visiting my site.</div>
 
 	 	</body>
 </html>

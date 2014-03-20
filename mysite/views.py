@@ -19,7 +19,7 @@ def current_datetime(request):
     return render_to_response('current_datetime.html', {'current_date':now})
 
     ## Best
-    return render_to_response('current_datetime.html', locals())
+    #return render_to_response('current_datetime.html', locals())
 
 
 def hours_ahead(request, offset):

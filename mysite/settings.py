@@ -83,4 +83,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+## The following few lines made the static css file working!
+## Source: http://stackoverflow.com/questions/6014663/django-static-file-not-found/6015706#6015706
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+STATICFILES_DIRS = (
+  os.path.join(SITE_ROOT, 'static/'),
+)
+
+STATIC_ROOT = ''
+
 STATIC_URL = '/static/'
